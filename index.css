@@ -1,0 +1,251 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Neutral
+
+- Almost White: hsl(0, 0%, 98%)
+- Medium Gray: hsl(0, 0%, 41%)
+- Almost Black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
+- Weights: 500, 700 */
+
+
+:root {
+    --almost-black: hsl(0, 0%, 8%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-white: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    background-color: var(--almost-white);
+    align-items: center;
+    overflow-x: hidden;
+    background-color: var(--almost-white);
+}
+
+.container {
+    max-width: 375px;
+    margin: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#hamburger {
+    justify-self: flex-end;
+}
+
+nav {
+    margin: 0 0 2rem 0;
+    max-height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav {
+}
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.hidden { 
+    visibility: hidden;
+}
+
+#mobile {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.1rem;
+    padding: 2rem 0 0 0;
+    font-weight: 700;
+    color: var(--almost-black);
+}
+
+h3 {
+    font-size: 0.94rem;
+    font-weight: 500;
+    line-height: 1.3rem;
+    color: var(--medium-gray);
+}
+
+button {
+    border: none;
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+    font-family: inherit;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    border: 1px solid --almost-black;
+    box-shadow: 5px 5px 15px 5px hsl(0, 0%, 91%);
+    margin: 1rem 0 2rem 0;
+}
+
+button:hover {
+    background-color: var(--almost-white);
+    color: var(--almost-black);
+    border: 1px solid;
+    border-color: var(--almost-black);
+    cursor: pointer;
+}
+
+.clients {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients>img {
+    width: 4rem;
+    height: 100%;
+}
+
+@media only screen and (min-width: 801px) {
+    .container {
+        max-width: 95%;
+    }
+
+    nav {
+        margin-top: 1rem;
+        width: 100%;
+        /* display: flex;
+        flex-direction: row; */
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    nav > div > img {
+        height: 50%;
+    }
+    main {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 1;
+        text-align: left;
+        align-self:center;
+    }
+
+    #image {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .content {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    #desktop {
+        width: 30rem;
+    }
+
+    .desktop-hidden {
+        display: none;
+    }
+
+    #mobile {
+        display: none;
+    }
+
+    #logo {
+        margin-right: 3rem;
+    }
+
+    #nav-contents {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+
+    #nav-contents > h3 {
+        padding: 1rem;
+    }
+
+    #gap {
+        flex-grow: 10;
+    }
+
+    #login {
+        justify-self: flex-end;
+    }
+
+    #register {
+        justify-self: flex-end;
+    }
+
+    #hamburger-div {
+        display: none;
+    }
+
+    h1 {
+        font-size: 4rem;
+        width: 90%;
+    }
+    .content > h3 {
+        width: 60%;
+        line-height: 1.5rem;
+    }
+
+    .clients {
+        margin-top: 3rem;
+        width: 70%;
+    }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    #desktop {
+        display: none;
+    }
+
+    #nav-contents {
+        display: none;
+    }
+
+}
