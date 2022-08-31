@@ -17,44 +17,59 @@
 
 <body>
   <div class="container">
-    <nav>
+    <nav class="parent">
       <div>
         <img id="logo" src="images/logo.svg">
       </div>
       <div id="hamburger-div">
         <img id="hamburger" src="images/icon-menu.svg">
+        <img id="exit-btn" class="hidden" src="images/icon-close-menu.svg">
       </div>
-      <section id="nav-contents">
-        <h3>Features</h3>
-        <div class="desktop-hidden">
-          <div>
+      <section id="nav-contents" class="hidden">
+        <div id="first-element" class="header-on-hover drop-down">
+          <h3>Features</h3>
+          <img src="images/icon-arrow-down.svg" alt="drop down arrow">
+          <img class="hidden" src="images/icon-arrow-up.svg" alt="drop down arrow">
+        </div>
+        <div id="features-dd" class="drop-down-content hidden">
+          <div class="drop-down-inline header-on-hover">
             <img src="images/icon-todo.svg">
             <h3>Todo List</h3>
           </div>
-          <div>
+          <div class="drop-down-inline header-on-hover">
             <img src="images/icon-calendar.svg">
             <h3>Calendar</h3>
           </div>
-          <div>
+          <div class="drop-down-inline header-on-hover">
             <img src="images/icon-reminders.svg">
             <h3>Reminders</h3>
           </div>
-          <div>
+          <div class="drop-down-inline header-on-hover">
             <img src="images/icon-planning.svg">
             <h3>Planning</h3>
           </div>
         </div>
-        <h3>Company</h3>
-        <div class="desktop-hidden">
-          <h3>History</h3>
-          <h3>Our Team</h3>
-          <h3>Blog</h3>
+        <div class="drop-down header-on-hover">
+          <h3>Company</h3>
+          <img src="images/icon-arrow-down.svg" alt="drop down arrow">
+          <img class="hidden" src="images/icon-arrow-up.svg" alt="drop down arrow">
         </div>
-        <h3>Careers</h3>
-        <h3>About</h3>
+        <div id="company-dd" class="drop-down-content hidden">
+          <div class="drop-down-inline header-on-hover">
+            <h3>History</h3>
+          </div>
+          <div class="drop-down-inline header-on-hover">
+            <h3>Our Team</h3>
+          </div>
+          <div class="drop-down-inline header-on-hover">
+            <h3>Blog</h3>
+          </div>
+        </div>
+        <h3 class="header-on-hover left">Careers</h3>
+        <h3 id="about" class="header-on-hover left">About</h3>
         <div id="gap"></div>
-        <h3 id="login">Login</h3>
-        <h3 id="register">Register</h3>
+        <h3 class="header-on-hover" id="login">Login</h3>
+        <button class="header-on-hover" id="register">Register</button>
       </section>
     </nav>
     <main>
@@ -80,6 +95,8 @@
       </section>
     </main>
   </div>
+
+  <script src="index.js"></script>
 </body>
 
 </html>

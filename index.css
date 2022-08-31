@@ -44,6 +44,7 @@ body {
     align-items: center;
     overflow-x: hidden;
     background-color: var(--almost-white);
+    position: relative;
 }
 
 .container {
@@ -56,6 +57,8 @@ body {
 
 #hamburger {
     justify-self: flex-end;
+    cursor: pointer;
+    /* z-index: 6; */
 }
 
 nav {
@@ -71,7 +74,48 @@ main {
     padding: 0;
 }
 
-.mobile-nav {
+#nav-contents {
+    position: absolute;
+    background-color: white;
+    z-index: 5;
+    width: 60%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
+    padding-left: 1rem;
+}
+
+#first-element {
+    margin-top: 3rem;
+}
+
+.drop-down {
+    display: flex;
+    align-items: center;
+}
+.drop-down > img {
+    height: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.drop-down-inline {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    margin-left: 2rem;
+}
+
+.drop-down-inline > img {
+    height: 1rem;
+    width: 1rem;
+    padding-right: 1rem;
+    /* put images in a div */
+}
+
+.left {
+    text-align: left;
 }
 
 .full-width {
@@ -84,7 +128,7 @@ main {
 }
 
 .hidden { 
-    visibility: hidden;
+    display: none;
 }
 
 #mobile {
@@ -103,6 +147,10 @@ h3 {
     font-weight: 500;
     line-height: 1.3rem;
     color: var(--medium-gray);
+}
+
+h3:hover {
+    color: var(--almost-black);
 }
 
 button {
@@ -124,8 +172,32 @@ button:hover {
     border: 1px solid;
     border-color: var(--almost-black);
     cursor: pointer;
+    box-shadow: none;
 }
 
+.header-on-hover:hover {
+    cursor: pointer;
+}
+
+#about {
+    margin-top: 1.5rem;
+}
+
+#login {
+    margin-top: 2rem;    
+}
+
+#register {
+    margin: 0;
+}
+
+#exit-btn {
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    z-index: 6;
+    cursor: pointer;
+}
 .clients {
     display: flex;
     justify-content: space-between;
@@ -148,6 +220,7 @@ button:hover {
         flex-direction: row; */
         justify-content: flex-start;
         align-items: center;
+        height: 1rem;
     }
 
     nav > div > img {
@@ -164,6 +237,10 @@ button:hover {
         align-self:center;
     }
 
+    #nav-contents {
+        position: static;
+    }
+
     #image {
         grid-column: 2/3;
         grid-row: 1/2;
@@ -173,6 +250,11 @@ button:hover {
         grid-column: 1/2;
         grid-row: 1/2;
     }
+
+    #first-element {
+        margin-top: 0;
+    }
+
 
     #desktop {
         width: 30rem;
@@ -195,10 +277,17 @@ button:hover {
         flex-direction: row;
         width: 100%;
         align-items: center;
+        background: none;
+        box-shadow: none;
     }
 
-    #nav-contents > h3 {
+    #nav-contents > h3, #nav-contents > div {
         padding: 1rem;
+        cursor: pointer;
+    }
+
+    #about {
+        margin-top: 1rem;
     }
 
     #gap {
@@ -207,10 +296,36 @@ button:hover {
 
     #login {
         justify-self: flex-end;
+        margin-top: 1rem;
     }
 
     #register {
         justify-self: flex-end;
+    }
+
+    .parent {
+        position: relative;
+    }
+
+    .drop-down-content {
+        position: absolute;
+        top: 2rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .drop-down-inline {
+        margin-left: 0;
+    }
+
+    #features-dd {
+        left: 6rem;
+    }
+
+    #company-dd {
+        left: 18rem;
+        height: 6rem;
     }
 
     #hamburger-div {
@@ -245,7 +360,7 @@ button:hover {
     }
 
     #nav-contents {
-        display: none;
+        /* display: none; */
     }
 
 }
